@@ -4,39 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portofolio</title>
-    <!-- Link Boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <title>Aegis COVID-19 Monitoring</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link href="Assets/carousel.css" rel="stylesheet" />
+    <link href="Assets/css/style.css" rel="stylesheet" />
   </head>
-
-  <body class="text-light" style="background-color: #050216">
-    <!-- Navbar -->
+  <body>
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #050216">
-        <div class="container fluid">
-          <a class="navbar-brand text-light px-3 py-3" href="index.html"><b>Portofolio | Syifaul Qolbi</b></a>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: #101431">
+        <div class="container">
+          <a class="navbar-brand text-light px-3 py-2" href="https://syibi.github.io" style="font-weight: 700; font-size: 24px">Syifaul Qolbi</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-md-end" id="navbarNav">
-            <ul class="nav nav-pills py-2 justify-content-center">
+            <ul class="nav py-2 justify-content-center gap-3" style="font-size: 18px">
               <li class="nav-item">
-                <a class="nav-link text-light" href="#">Home</a>
+                <a class="nav-link text-light active" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="#About">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light active" href="#Project">Project</a>
+                <a class="nav-link text-light" href="#Detail">Details</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-light" href="#Contact">Contact</a>
@@ -47,127 +36,277 @@
       </nav>
     </header>
     <!-- Akhir Navbar -->
+    <!-- Carousel -->
     <main>
-      <div class="container col-xxl-8 pt-4">
-        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <div>
+        <section id="carousel" class="page-section">
+          <div class="container-carousel col-xxl-8 pt-4">
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              </div>
+              <div class="carousel-inner">
+                <!-- content carousel 1 -->
+                <div class="carousel-item active">
+                  <div class="carousel-caption text-start">
+                    <div class="row flex-lg pt-5">
+                      <div class="col-lg-6 pb-1">
+                        <img src="Assets/img/layout_1.png" class="d-block mx-auto img-fluid" alt="Bootstrap Themes" style="width: 60%; height: auto" />
+                      </div>
+                      <div class="col-lg-6 px-3 align-items-center pt-5">
+                        <h1 class="fw-semibold lh-2 mb-2 text-light">Aegis Covid-19 Monitoring</h1>
+                        <p class="text-light">Sistem Pemantauan dan Analisa Cerdas Kesehatan Pasien Isolasi Mandiri COVID-19 berbasis Internet of Things</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- content carousel 2 -->
+                <div class="carousel-item">
+                  <div class="carousel-caption text-start">
+                    <div class="row flex-lg pt-5">
+                      <div class="col-lg-6 pb-1">
+                        <img src="Assets/img/layout_3.png" class="d-block mx-auto img-fluid" alt="Bootstrap Themes" style="width: 60%; height: auto" />
+                      </div>
+                      <div class="col-lg-6 px-3 align-items-center pt-5">
+                        <h1 class="fw-semibold lh-2 mb-2 text-light">Aegis Covid-19 Monitoring</h1>
+                        <p class="text-light">Sistem Pemantauan dan Analisa Cerdas Kesehatan Pasien Isolasi Mandiri COVID-19 berbasis Internet of Things</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
           </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active" style="background-size: cover">
-              <img src="Assets/database.PNG" width="100%" height="100%" />
-              <div class="container">
-                <div class="carousel-caption text-start">
-                  <h1>Example contain.</h1>
-                  <p>Some representative placeholder content for the first slide of the carousel.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+
+          <div class="row pb-5 px-3">
+            <div class="col-lg-6">
+              <div class="btn-toolbar d-flex justify-content-center pt-4 gap-4" role="toolbar" aria-label="aksi">
+                <div class="btn-group" role="group">
+                  <button onclick="window.open('https://web.facebook.com/syaiful.aziz.33');" class="btn btn-social"><i class="bi bi-facebook"></i></button>
+                </div>
+                <div class="btn-group" role="group">
+                  <button onclick="window.open('https://instagram.com/syibi_24');" class="btn btn-social"><i class="bi bi-instagram"></i></button>
+                </div>
+                <div class="btn-group" role="group">
+                  <button onclick="window.open('https://wa.me/6285730310246');" class="btn btn-social"><i class="bi bi-whatsapp"></i></button>
+                </div>
+                <div class="btn-group" role="group">
+                  <button class="btn btn-social"><i class="bi bi-linkedin"></i></button>
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
-              <img src="Assets/training yolov5.png" />
-              <div class="container">
-                <div class="carousel-caption">
-                  <h1>Another example fill.</h1>
-                  <p>Some representative placeholder content for the second slide of the carousel.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-                </div>
+
+            <div class="col-lg-6 pb-5">
+              <div class="d-grid gap-2 d-md-flex justify-content-md-center pt-4">
+                <button type="button" class="btn btn-outline-primary btn-lg px-3 me-md-2">Download CV</button>
+                <button type="button" class="btn btn-github px-3 me-md-2" onclick="window.open('https://github.com/Syibi');"><i class="bi bi-github" style="color: white"></i>More on Github</button>
               </div>
             </div>
-            <div class="carousel-item">
-              <img src="Assets/layout_1.png" />
-              <div class="container">
-                <div class="carousel-caption text-end">
-                  <h1>One more for good cover.</h1>
-                  <p>Some representative placeholder content for the third slide of this carousel.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          </div>
+        </section>
+        <!-- End Carousel -->
+
+        <!-- Detail Section -->
+        <section id="Detail" class="page-section pt-5">
+          <div class="container pt-5 px-4">
+            <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-3">
+              <div class="d-flex flex-column align-items-start gap-1">
+                <img src="Assets/img/fitur.png" class="d-block mx-auto img-fluid" alt="Bootstrap Themes" style="width: 70%; height: auto" />
+              </div>
+              <div class="d-flex flex-column align-items-start gap-1">
+                <div class="d-flex flex-column gap-2">
+                  <h2 class="fw-semibold mb-0 text-light">Tentang Projek</h2>
+                  <div class="line"></div>
+                  <p class="text-light pt-2">
+                    Aegis adalah sistem yang digunakan untuk memantau dan menganalisa kesehatan pasien yang mengalami isolasi mandiri COVID-19, sistem ini mampu menampilkan hasil pemantauan kondisi kesehatan pasien (suhu tubuh, denyut
+                    jantung dan saturasi oksigen) menggunakan beberapa sensor yang sudah terpasang pada tubuh pasien.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+          <div class="container pt-5 px-4">
+            <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-3">
+              <div class="d-flex flex-column align-items-start gap-1 order-lg-2">
+                <img src="Assets/img/ilustrasi.PNG" class="d-block mx-auto img-fluid" alt="Bootstrap Themes" style="width: 100%; height: auto" />
+              </div>
+              <div class="d-flex flex-column align-items-start gap-1 order-lg-1">
+                <div class="d-flex flex-column gap-2">
+                  <h2 class="fw-semibold mb-0 text-light">Prinsip Kerja</h2>
+                  <div class="line"></div>
+                  <p class="text-light pt-2">
+                    Sistem ini mampu mengukur suhu tubuh, detak jantung, dan saturasi oksigen pada pasien isolasi mandiri COVID-19. <br /><br />Sensor DS18B210 digunakan untuk mengukur suhu dan sensor MAX 30102 untuk mendeteksi detak
+                    jantung dan tingkat saturasi oksigen pada pasien secara realtime dari jarak jauh melalui internet menggunakan NodeMCU ESP 8266.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container pt-5 px-4">
+            <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-3">
+              <div class="d-flex flex-column align-items-start gap-1">
+                <img src="Assets/img/database.PNG" class="d-block mx-auto img-fluid" alt="Bootstrap Themes" style="width: 90%; height: auto" />
+              </div>
+              <div class="d-flex flex-column align-items-start gap-1">
+                <div class="d-flex flex-column gap-2">
+                  <h2 class="fw-semibold mb-0 text-light">Prinsip Kerja</h2>
+                  <div class="line"></div>
+                  <p class="text-light pt-2">
+                    Data yang sudah didapatkan akan disimpan di Google Firebase dan dikirmkan ke smartphone pengguna. Aplikasi pada smartphone pengguna digunakan sebagai alat untuk monitoring dan analisa kondisi pasien menggunakan sistem
+                    pakar.
+                    <br /><br />
+                    Sistem pakar yang digunakan menggunakan Mesin Inferensi Forward Chaining berdasarkan metode Certainty Factor. Data hasil monitoring akan ditambahkan denganpasien akan memasukkan beberapa gejala sehingga didapatkan
+                    analisa kesehatan pasien COVID-19 selama melakukan isolasi mandiri secara realtime.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container pt-5 px-4">
+            <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-3">
+              <div class="d-flex flex-column align-items-start gap-1 order-lg-2">
+                <img src="Assets/img/layout_2.png" class="d-block mx-auto img-fluid" alt="Bootstrap Themes" style="width: 100%; height: auto" />
+              </div>
+              <div class="d-flex flex-column align-items-start gap-1 order-lg-1">
+                <div class="d-flex flex-column gap-2">
+                  <h2 class="fw-semibold mb-0 text-light">Hasil</h2>
+                  <div class="line"></div>
+                  <p class="text-light pt-2">
+                    Sistem ini mampu meningkatkan efektivitas dan efisiensi dan memudahkan dalam memantau kondisi tubuh pada pasien isolasi mandiri yang khususnya jauh dari fasilitas Kesehatan. <br />
+                    <br />
+                    Selain itu, sistem ini menurunkan tingkat resiko mengalami kondisi yang lebih buruk akibat kurangnya informasi kondisi tubuh dan lambatnya proses penanganan medis.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Detail -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="page-section">
+          <div class="container px-4 pt-5" id="Contact">
+            <div class="row pt-5">
+              <div class="text-center">
+                <h2>Contact Me</h2>
+                <p class="text-light pt-2">If you have any questions or would like to discuss an opportunity to work together, feel free to get in touch.</p>
+              </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 pt-3 pb-2">
+              <div class="d-flex flex-column align-items-start gap-4">
+                <div class="row">
+                  <div class="col-md-auto">
+                    <button class="btn"><i class="bi-fill bi-telephone-fill"></i></button>
+                  </div>
+                  <div class="col-md-auto">
+                    <h3 class="mb-0 text-light">Phone</h3>
+                    <p class="text-light">+6285-730-310-246</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-auto">
+                    <button class="btn"><i class="bi-fill bi-envelope-fill"></i></button>
+                  </div>
+                  <div class="col-md-auto">
+                    <h3 class="mb-0 text-light">Email</h3>
+                    <p class="text-light">syifaulqolbi24@gmail.com</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-auto">
+                    <button class="btn"><i class="bi-fill bi-geo-alt-fill"></i></button>
+                  </div>
+                  <div class="col-md-9">
+                    <h3 class="fw-semibold mb-0 text-light">Address</h3>
+                    <p class="text-light">Jalan Batulapis RT 01 RW 04 Desa Sendangagung Kecamatan Paciran Kabupaten Lamongan <br />Jawa Timur (62264)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-column align-items-start">
+                <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                  <div class="row pt-2">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-floating">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
+                        <label class="floatingInput">Your Name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-floating">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
+                        <label class="floatingInput">Your Email</label>
+                      </div>
+                    </div>
+                    <div class="col-md-12 mb-4">
+                      <div class="form-floating">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
+                        <label class="floatingInput">Subject</label>
+                      </div>
+                    </div>
+                    <div class="col-md-12 mb-4">
+                      <div class="form-floating">
+                        <textarea class="form-control" name="message" style="height: 120px" placeholder="Message" required></textarea>
+                        <label class="floatingInput">Message</label>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <button type="submit" class="btn btn-outline-primary btn-md px-2">Send Message</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-
-      <div class="container marketing">
-        <hr class="featurette-divider" />
-        <div class="row">
-          <div class="col-lg-4">
-            <h3 class="fw-normal">Heading</h3>
-            <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <h3 class="fw-normal">Heading</h3>
-            <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <h3 class="fw-normal">Heading</h3>
-            <p>And lastly this, the third column of representative placeholder content.</p>
-          </div>
-          <!-- /.col-lg-4 -->
-        </div>
-        <hr class="featurette-divider" />
-        <!-- /.row -->
-        <div class="row">
-          <div class="col-md-7">
-            <h3 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-light">It’ll blow your mind.</span></h3>
-            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-          </div>
-          <div class="col-md-5">
-            <img src="Assets/layout_2.png" class="d-block mx-auto img-fluid" alt="Bootstrap Themes" style="width: 50%; height: 100%" />
-          </div>
-        </div>
-
-        <hr class="featurette-divider" />
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h3 class="featurette-heading fw-normal lh-1">Oh yeah, its that good. <span class="text-light">See for yourself.</span></h3>
-            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img src="Assets/layout_3.png" class="d-block mx-auto img-fluid" alt="Bootstrap Themes" style="width: 50%; height: 80%" />
-          </div>
-        </div>
-
-        <hr class="featurette-divider" />
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h3 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-light">Checkmate.</span></h3>
-            <p class="lead">
-              And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.
-            </p>
-          </div>
-          <div class="col-md-5">
-            <img src="Assets/layout_5.png" class="d-block mx-auto img-fluid" alt="Bootstrap Themes" style="width: 50%; height: 80%" />
-          </div>
-        </div>
-      </div>
-      <!--  End Portfolio Details Sect -->
-      <!-- End #main -->
     </main>
-    <!-- ======= Footer ======= -->
-    <div class="container">
-      <footer>
-        <p class="text-center text-muted border-top pt-3">copyright 2022</p>
-      </footer>
-    </div>
+    <footer>
+      <div class="footer">
+        <div class="row row-cols-1 row-cols-2 align-items-md-center">
+          <h5 class="footer-h5"><b>Syifaul Qolbi </b>| Portofolio</h5>
+          <h5 class="footer-cp">&copy; Copyright 2022</h5>
+        </div>
+      </div>
+    </footer>
 
-    <!-- End  Footer -->
+    <!-- JavaScript code -->
+    <script>
+      /* Code for changing active
+            link on clicking */
+      var btns = $("#navigation .nav .nav-link");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
 
-    <!-- Vendor JS Files -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+      /* Code for changing active
+            link on Scrolling */
+      $(window)
+        .scroll(function () {
+          var distance = $(window).scrollTop();
+          $(".page-section").each(function (i) {
+            if ($(this).position().top <= distance + 250) {
+              $(".nav a.active").removeClass("active");
+              $(".nav a").eq(i).addClass("active");
+            }
+          });
+        })
+        .scroll();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>
 </html>
