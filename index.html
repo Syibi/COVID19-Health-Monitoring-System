@@ -234,7 +234,13 @@
                 </div>
               </div>
               <div class="d-flex flex-column align-items-start">
-                <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                <div class="col-md-12">
+                  <div class="alert alert-primary alert-dismissible fade show d-none" role="alert">
+                    <strong>Thank you,</strong> Your message has been sent.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                </div>
+                <form name="submit-to-google-sheet" class="contactForm">
                   <div class="row pt-2">
                     <div class="col-md-6 mb-4">
                       <div class="form-floating">
@@ -260,8 +266,13 @@
                         <label class="floatingInput">Message</label>
                       </div>
                     </div>
-                    <div class="col-md-12">
-                      <button type="submit" class="btn btn-outline-primary btn-md px-2">Send Message</button>
+                    <div class="col-md-12" data-aos="zoom-in" data-aos-delay="400">
+                      <button type="submit" class="btn btn-outline-primary btn-md px-2 btn-send">Send Message</button>
+
+                      <button class="btn btn-loading-primary btn-md px-2 d-none" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Loading...
+                      </button>
                     </div>
                   </div>
                 </form>
@@ -275,15 +286,14 @@
       <div class="footer">
         <div class="row row-cols-1 row-cols-2 align-items-md-center">
           <h5 class="footer-h5"><b>Syifaul Qolbi </b>| Portofolio</h5>
-          <h5 class="footer-cp">&copy; Copyright 2022</h5>
+          <h5 class="footer-cp">Copyright &copy; 2022</h5>
         </div>
       </div>
     </footer>
 
     <!-- JavaScript code -->
+    <!-- script for navigation bar -->
     <script>
-      /* Code for changing active
-            link on clicking */
       var btns = $("#navigation .nav .nav-link");
       for (var i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click", function () {
@@ -292,9 +302,6 @@
           this.className += " active";
         });
       }
-
-      /* Code for changing active
-            link on Scrolling */
       $(window)
         .scroll(function () {
           var distance = $(window).scrollTop();
@@ -306,6 +313,30 @@
           });
         })
         .scroll();
+    </script>
+
+    <!-- script for submit contact form to google spreadsheet -->
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxW1laHCJhiHkxqOJ8rGUiXy-BEaJvg6ZC2KWxTdeNNexTz2KxVU49X9e3wL8mCBBnZWw/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const btnSend = document.querySelector(".btn-send");
+      const btnLoading = document.querySelector(".btn-loading-primary");
+      const sendAlert = document.querySelector(".alert-primary");
+
+      form.addEventListener("submit", (e) => {
+        btnSend.classList.toggle("d-none");
+        btnLoading.classList.toggle("d-none");
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            console.log("Success!", response);
+            btnSend.classList.toggle("d-none");
+            btnLoading.classList.toggle("d-none");
+            sendAlert.classList.toggle("d-none");
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>

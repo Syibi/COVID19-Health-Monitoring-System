@@ -119,6 +119,23 @@ a:hover {
   border-color: #523ffb;
 }
 
+.btn-loading-primary:disabled {
+  width: 43mm;
+  background-color: #16baff;
+  border-color: #16baff;
+  color: white;
+  font-weight: 500;
+  border-radius: 25px;
+  border-width: 0.2rem;
+}
+
+@media screen and (max-width: 55em) {
+  .btn-loading-primary {
+    display: block;
+    width: 100%;
+  }
+}
+
 .btn-github {
   display: flex;
   justify-content: center;
